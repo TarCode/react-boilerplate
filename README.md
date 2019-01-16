@@ -1,3 +1,11 @@
+# React boilerplate
+
+## Includes
+
+- React Router DOM for client side routing
+- Redux for state management
+- Formik for creating forms
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
