@@ -3,9 +3,9 @@ import { Formik } from 'formik';
 
 export default () => (
     <div>
-        <h1>Auth</h1>
+        <h1>Form</h1>
         <Formik
-            initialValues={{email: ''}}
+            initialValues={{name: ''}}
             onSubmit={(values, actions) => {
             console.log("VALUES", values)
             setTimeout(() => {
@@ -26,13 +26,14 @@ export default () => (
             }) => (
             <form onSubmit={handleSubmit}>
                 <input
-                    type="email"
-                    name="email"
+                    type="text"
+                    name="name"
+                    placeholder="Name"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    value={values.email}
+                    value={values.name}
                 />
-                {errors.email && touched.email && <div>{errors.email}</div>}
+                {errors.name && touched.name && <div>{errors.name}</div>}
                 {status && status.msg && <div>{status.msg}</div>}
                 <button type="submit" disabled={isSubmitting}>
                     Submit
